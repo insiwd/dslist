@@ -1,6 +1,7 @@
 package com.insiwd.dslist.dto;
 
 import com.insiwd.dslist.entities.Game;
+import com.insiwd.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -20,6 +21,15 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection projection) {
+        // não precisamos do "this"
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
     }
 
     // só precisamos de getters
