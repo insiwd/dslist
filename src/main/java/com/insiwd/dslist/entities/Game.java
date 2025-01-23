@@ -28,7 +28,7 @@ public class Game {
     private Double score;
     private String imgUrl;
 
-    // esse campo não pode apenas ser uma String do java, precisamos de uma instrução, para que a JPA gere como TEXTO, não VARCHAR(255)
+    // esse campo não pode apenas ser uma String do java, precisamos de uma instrução, para que a JPA gere como TEXTO, não VARCHAR(254)
     // anotamos os dois
     @Column(columnDefinition = "TEXT")
     private String shortDescription;
